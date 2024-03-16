@@ -1,14 +1,16 @@
 <div class="container">
     <div class="product-container">
-    <h3 class="product-name">Product Name</h3>
-        <p class="product-description">Product Description</p>
+        {{#with product}}
+            <h3 class="product-name">{{name}}</h3>
+            <p class="product-description">{{description}}</p>
 
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae ut autem atque consequatur minima, deleniti dolores eligendi, velit nobis earum esse qui! Quos voluptates accusantium libero, amet ipsa fuga facilis.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae ut autem atque consequatur minima, deleniti dolores eligendi, velit nobis earum esse qui! Quos voluptates accusantium libero, amet ipsa fuga facilis.</p>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui non illo facilis quo libero quasi eos commodi error corporis? Aliquam reprehenderit in a earum voluptatem eveniet eius ut? Dolor, labore!</p>
-        <p class="product-price">$ <span class="price-value">00.00</span></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui non illo facilis quo libero quasi eos commodi error corporis? Aliquam reprehenderit in a earum voluptatem eveniet eius ut? Dolor, labore!</p>
+            <p class="product-price">$ <span class="price-value">{{price}}</span></p>
 
-        <a class="product-link" href="#">Buy</a>
-        <a class="product-link go-back" href="/products">Go back</a>
+            <a class="product-link" href="#">Buy</a>
+            <a class="product-link go-back" href="/products">Go back</a>
+        {{/with}}
     </div>
 </div>
