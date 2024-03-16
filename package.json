@@ -1,0 +1,28 @@
+{
+  "name": "10_task_4",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Simple node.js project made using express and handlebars for teaching purposes",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js localhost 3000"
+  },
+  "keywords": [
+    "express",
+    "express-handlebars",
+    "handlebars",
+    "template-engine",
+    "node",
+    "javascript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3",
+    "express-handlebars": "^7.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

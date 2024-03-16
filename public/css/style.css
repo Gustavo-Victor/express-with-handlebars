@@ -1,0 +1,264 @@
+/*reset*/
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    background-color: #ccc;
+}
+
+
+/*header*/
+.header {
+    width: 100%; 
+    background-color: #333;
+    height: 80px;  
+    color: #fefefe;
+}
+
+.nav {
+    padding: 0 2rem; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 100%;
+}
+
+.nav .nav-list {
+    display: flex;
+    align-items: center;    
+    gap: 0; 
+}
+
+.nav .nav-list .nav-item {
+    list-style-type: none;
+}
+
+.nav-list .nav-item .nav-link{ 
+    display: block;
+    padding: 1.5rem 1.2rem;
+    color: #fefefe;
+    text-decoration: none;
+    transition: 0.2s; 
+}
+
+.nav-list .nav-item .nav-link:hover {
+    background-color: #555; 
+    color: white;
+}
+
+.nav .nav-icon {
+    color: #fefefe; 
+    transition: 0.2s;
+    cursor: pointer;
+    display: none;
+    font-size: 23px;
+}
+
+.nav .nav-icon:hover {
+    color: #fff;
+}
+
+
+/*main content*/
+.container {
+    background-color: #fff;
+    color: #111; 
+    width: 90%; 
+    max-width: 1400px;
+    min-height: 70%;
+    padding: 2rem; 
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 3px 2px rgba(0,0,0,0.2);
+    margin: 0 auto; 
+}
+
+.container h1 {
+    margin-bottom: 1rem;
+}
+
+.container p {
+    margin: 0.5rem 0;
+    color: #777;
+}
+
+.container hr {
+    margin: 1.5rem 0;
+    height: 0;
+    border: 1px solid #ccc;
+}
+
+
+/*products*/
+.products {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+
+.product-single {
+    width: 25%;
+    padding: 1.6rem 1rem; 
+    background-color: #faf5f5;
+    margin-bottom: 0.7rem;
+    border-radius: 0.3rem;    
+    min-height: 250px;
+    box-shadow: 1px 1px 3px 2px rgba(190, 190, 190, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-container {
+    background-color: #faf5f5;
+    box-shadow: 1px 1px 3px 2px rgba(190, 190, 190, 0.3);
+    padding: 2rem;
+    min-height: 400px;
+}
+
+
+.product-name {
+    font-size: 1.1rem;
+    color: #5c5c5c;
+} 
+
+.product-description { 
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.product-price {
+    font-size: 0.9rem;
+}
+
+.product-price .price-value {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.product-link {
+    display: inline-block;
+    text-align: center;
+    color: white; 
+    background-color: rgb(0, 108, 197);
+    padding: 1rem;
+    height: 50px; 
+    border-radius: 0.5rem;
+    color: pointer;
+    text-decoration: none;
+}
+
+.product-link.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-link.go-back {
+    background-color: #5c5c5c;
+    margin-left: 0.5rem;
+}
+
+.product-link:hover {
+    opacity: 0.9;
+}
+
+
+.error-message {
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(250, 172, 172);
+    color: rgb(97, 0, 0);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px 2px rgba(255, 0, 0, 0.2);
+}
+
+
+/*footer*/
+.footer {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #111;
+    color: #fefefe; 
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: none;
+    
+}
+
+@media only screen and (max-width: 860px) { 
+    .product-single { 
+        min-width: 50%;
+        flex: 1;
+    }
+}
+
+
+
+@media only screen and (max-width: 460px) {
+    .nav .nav-icon { 
+        display: block; 
+    }
+
+    .nav .nav-list {
+        position: absolute;
+        top: 80px; 
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;   
+        background-color: #333;     
+    }
+
+    .nav .nav-list.active {
+        display: flex;
+    }
+
+    .nav .nav-list .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav .nav-list .nav-item .nav-link {
+        padding: 1.5rem 0;
+        display: block;
+        width: 100%; 
+    }
+
+
+}
+
+
+@media only screen and (max-width: 340px) {  
+    .product-description { 
+        font-size: 0.8rem;
+    }
+    
+    .product-link {
+        display: block;
+        margin: 1rem 0;
+        font-size: 0.9rem;
+    }
+
+    .product-link.go-back {
+        margin-left: 0;
+    }
+}
